@@ -1,0 +1,14 @@
+{
+  "name": "pbu-to-spc",
+  "version": "1.0.0",
+  "description": "pbu regist to spring cloud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AngusC",
+  "license": "MIT",
+  "dependencies": {
+    "eureka-js-client": "^4.3.0"
+  }
+}
