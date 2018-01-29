@@ -37,10 +37,18 @@ function getIPAddr() {
     return ipAddr;
 }
 
+function eurekaHost(config) {
+    if (config.eurekaHost) {
+        return config.eurekaHost
+    }else {
+        return url.parse(config.businessApiUrl).hostname
+    }
+}
+
 module.exports.registToSpringCloud = function(config, app, appName) {
     const ipAddr = getIPAddr();
 
-    const eurekaHost = url.parse(config.businessApiUrl).hostname;
+    const eurekaHost = eurekaHost(config);
 
     const client = new Eureka({
         instance: {
